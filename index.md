@@ -12,6 +12,7 @@ gallery:
   - src: /assets/img/s-5.jpg
     alt: #
 ---
+<div class="sh-info" />
 > Vizyon sahibi bir medya kuruluşu olarak, çalişkan ekibimizle yenilikçi bir bakiş açisiyla başladiğimiz yolda, gündemi takip eden ,günlük yaşantimizda gereken bilgilerle sentezlenmiş ve kültür çeşitliliğine saygi duyan bir yapidayiz..
 
 <div class="sh-gallery">
