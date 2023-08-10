@@ -1,5 +1,10 @@
 remote_theme: pages-themes/cayman@v0.2.0
 livereload: true
-url: http://localhost
+url: https://www.shahanimedya.com/
 title: Shahanı Medya
 description: Vizyon sahibi bir medya
+collections:
+  gallery:
+    files: true
+
+
