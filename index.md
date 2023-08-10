@@ -1,1 +1,1 @@
-VİZYON SAHİBİ BİR MEDYA KURULUŞU OLARAK, ÇALIŞKAN EKİBİMİZLE YENİLİKÇİ BİR BAKIŞ AÇISIYLA BAŞLADIĞIMIZ YOLDA, GÜNDEMİ TAKİP EDEN ,GÜNLÜK YAŞANTIMIZDA GEREKEN BİLGİLERLE SENTEZLENMİŞ VE KÜLTÜR ÇEŞİTLİLİĞİNE SAYGI DUYAN BİR YAPIDAYIZ..
+Vizyon sahibi bir medya kuruluşu olarak, çalişkan ekibimizle yenilikçi bir bakiş açisiyla başladiğimiz yolda, gündemi takip eden ,günlük yaşantimizda gereken bilgilerle sentezlenmiş ve kültür çeşitliliğine saygi duyan bir yapidayiz..
