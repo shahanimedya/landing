@@ -3,14 +3,38 @@
 
 @import "{{ site.theme }}";
 
+.main-content {
+  padding: 3rem 6rem;
+}
+
 .page-header {
   background-image: linear-gradient(120deg, #155799, #e64c32);
-  // background-image: url(https://yt3.googleusercontent.com/NdFDnPigpNjiwASMbtbiqRpo5Ltyq4epkObqtIyBMaSvdqVMSkCb0DeAF-WgPRTDAuPQlL_Uug=w1707-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj);
   background-image: url(/assets/img/banner.svg);
   background-repeat:no-repeat;
   background-position: center center;
   background-color: #fff;
 }
+
 .project-name {
   text-transform: uppercase;
+}
+
+.sh-gallery {
+  padding-top: 24px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+
+  img {
+    width: 400px;
+    object-fit: cover;
+    border-radius: 4px;
+    transition: all .3s;
+    box-shadow: 0 1px 1px 0 rgba(66, 66, 66, 0.08), 0 1px 3px 1px rgba(66, 66, 66, 0.16);
+  }
+  img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 6px 6px 0 rgba(66, 66, 66, 0.08), 0 1px 3px 1px rgba(66, 66, 66, 0.16);
+  }
 }
