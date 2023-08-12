@@ -3,8 +3,17 @@
 
 @import "{{ site.theme }}";
 
+.main-content {
+  blockquote {
+    color: #792b16;
+    border-left: 0.3rem solid #d5573e;
+  }
+}
+
 .sh-info {
+  margin-top: 24px;
   padding-top: 12px;
+  box-shadow: 0 1px 1px 0 rgba(66, 66, 66, 0.08), 0 1px 3px 1px rgba(66, 66, 66, 0.16);
 }
 
 .page-header {
@@ -12,7 +21,18 @@
   background-image: url(/assets/img/banner.svg);
   background-repeat:no-repeat;
   background-position: center center;
-  background-color: #fff;
+  background-color: transparent;
+}
+
+.parallax {
+  /* The image used */
+  background-image: url("/assets/img/parallax.svg");
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .project-name {
