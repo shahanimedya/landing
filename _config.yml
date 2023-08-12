@@ -3,6 +3,7 @@ livereload: true
 url: https://www.shahanimedya.com/
 title: Shahanı Medya
 description: Vizyon sahibi bir medya
+locale: tr_TR
 collections:
   gallery:
     files: true
