@@ -3,6 +3,38 @@
 
 @import "{{ site.theme }}";
 
+@media screen and (max-width: 42em) {
+.page-header {
+  padding: 5rem 1rem 1rem 1rem;
+}
+}
+
+@media screen and (min-width: 42em) and (max-width: 64em) {
+.page-header {
+  padding: 5rem 4rem 5rem 4rem;
+}
+}
+
+@media screen and (min-width: 64em) {
+.page-header {
+  padding: 5rem 6rem 2rem 6rem;
+}
+}
+
+header {
+  h4 a {
+    color: #fff;
+    margin-left: 8px;
+  }
+  .project-name, .project-tagline, a, h5, h4 {
+    text-shadow: #000 1px 0 10px;
+    margin-bottom: 1rem;
+  }
+  .btn {
+    box-shadow:  #000 1px 0 10px;
+  }
+}
+
 .main-content {
   blockquote {
     color: #792b16;
@@ -16,9 +48,17 @@
   box-shadow: 0 1px 1px 0 rgba(66, 66, 66, 0.08), 0 1px 3px 1px rgba(66, 66, 66, 0.16);
 }
 
+.banner-img {
+  position: absolute;
+  top: 0;
+  left: calc((100vw - 809px)/2);
+  z-index: 0;
+}
+
 .page-header {
   background-image: linear-gradient(120deg, #155799, #e64c32);
-  background-image: url(/assets/img/banner.svg);
+  //background-image: url(/assets/img/banner.svg);
+  background-image: url(/assets/img/banner.jpg);
   background-repeat:no-repeat;
   background-position: center center;
   background-color: transparent;

@@ -1,11 +1,14 @@
 remote_theme: pages-themes/cayman@v0.2.0
 livereload: true
 url: https://www.shahanimedya.com/
-title: Shahanı Medya
+title: Shahanı Medya Yayincilik
 description: Vizyon sahibi bir medya
 locale: tr_TR
 collections:
   gallery:
     files: true
 
+phone-1: 0(242)511-4040
+phone-2: 0(532)358-2074
+email: shahanimedya@gmail.com
 
