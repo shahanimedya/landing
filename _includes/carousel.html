@@ -11,47 +11,45 @@
     </div>
   </div>
 </div>
+
 <script>
-  const slider = document.querySelector("#slider");
-  const slidersQty = slider.children.length;
-  const screenWidth = screen.width;
+const slider = document.querySelector("#slider");
+const slides = Array(slider.childElementCount).fill().map((e, i) => slider.children[i]);
+let timeoutId = null;
 
-  const slides = Array(slider.childElementCount).fill().map((e, i) => slider.children[i]);
-  let timeoutId = null;
+const slideToNext = (currentSlide) => {
+    if (timeoutId) {
+        clearTimeout(timeoutId);
+      }
+    timeoutId = setTimeout(() => {
+        const currentIndex = slides.findIndex((e) => e.id === currentSlide.target.id);
 
-  const slideToNext = (currentSlide) => {
-      if (timeoutId) {
-          clearTimeout(timeoutId);
+        if (slider.childElementCount === currentIndex + 1) {
+          /** end of the loop */
+          slider.scroll({left: 0});
+        } else {
+          /** slide to the next one */
+          slider.scroll({left: slides[currentIndex + 1].getBoundingClientRect().width *
+              (currentIndex + 1)})
         }
-      timeoutId = setTimeout(() => {
-          const currentIndex = slides.findIndex((e) => e.id === currentSlide.target.id);
 
-          if (slider.childElementCount === currentIndex + 1) {
-            /** end of the loop */
-            slider.scroll({left: 0});
-          } else {
-            /** slide to the next one */
-            slider.scroll({left: slides[currentIndex + 1].getBoundingClientRect().width *
-                (currentIndex + 1)})
+      }, 2400);
+  };
+
+const onIntersect = (entries, observer) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            slideToNext(entry);
           }
+      });
+  };
 
-        }, 2400);
-    };
+const observer = new IntersectionObserver(onIntersect, {
+    root: slider,
+    rootMargin: "0px",
+    threshold: 0.75,
+  });
 
-  const onIntersect = (entries, observer) => {
-      entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-              slideToNext(entry);
-            }
-        });
-    };
-
-  const observer = new IntersectionObserver(onIntersect, {
-      root: slider,
-      rootMargin: "0px",
-      threshold: 0.75,
-    });
-
-  slides.forEach(slide => observer.observe(slide));
+slides.forEach(slide => observer.observe(slide));
 
 </script>
