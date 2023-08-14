@@ -14,6 +14,7 @@
   </head>
   <body>
     <a id="skip-to-content" href="#content">Skip to the content.</a>
+      {% include nav-bar.html %}
 
     <header class="page-header" role="banner">
       <!--<img src="/assets/img/banner.jpg" class="banner-img" />-->
@@ -22,15 +23,18 @@
       <h2 class="project-tagline">{{ page.description | default: site.description | default: site.github.project_tagline }}</h2>
       -->
       <a href="https://www.youtube.com/@ShahaniMedya" class="btn">YouTube</a>
+      <!--
       <h4>
         <a href="tel:{{ site.phone-1 }}">{{ site.phone-1 }}</a>
         <a href="tel:{{ site.phone-2 }}">{{ site.phone-2 }}</a>
         <a href="mailto:{{ site.email }}">{{ site.email }}</a>
       </h4>
+      -->
 
     </header>
 
     <main id="content" role="main">
+
       {% include carousel.html %}
 
       {{ content }}
