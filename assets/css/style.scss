@@ -3,38 +3,56 @@
 
 @import "{{ site.theme }}";
 
-@media screen and (max-width: 42em) {
-.page-header {
-  padding: 5rem 1rem 1rem 1rem;
+/** Carousel */
+.slider {
+  text-align: center;
+  overflow: hidden;
 }
-}
+.slides {
+  display: flex;
 
-@media screen and (min-width: 42em) and (max-width: 64em) {
-.page-header {
-  padding: 5rem 4rem 5rem 4rem;
-}
-}
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
 
-@media screen and (min-width: 64em) {
-.page-header {
-  padding: 5rem 6rem 2rem 6rem;
-}
-}
 
-header {
-  h4 a {
-    color: #fff;
-    margin-left: 8px;
+
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+
+  scroll-snap-points-x: repeat(300px);
+  scroll-snap-type: mandatory;
+
+  &>div {
+    scroll-snap-align: start;
+    flex-shrink: 0;
+    width: 100vw;
+    height: 300px;
+    background: #eee;
+    transform-origin: center center;
+    transform: scale(1);
+    transition: transform 0.5s;
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 100px;
   }
-  .project-name, .project-tagline, a, h5, h4 {
-    text-shadow: #000 1px 0 10px;
-    margin-bottom: 1rem;
-  }
-  .btn {
-    box-shadow:  #000 1px 0 10px;
-  }
 }
 
+.slides::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+.slides::-webkit-scrollbar-thumb {
+  background: black;
+  border-radius: 10px;
+}
+.slides::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/** Other */
 .main-content {
   blockquote {
     color: #792b16;
@@ -57,8 +75,8 @@ header {
 
 .page-header {
   background-image: linear-gradient(120deg, #155799, #e64c32);
-  //background-image: url(/assets/img/banner.svg);
-  background-image: url(/assets/img/banner.jpg);
+  background-image: url(/assets/img/banner.svg);
+  // background-image: url(/assets/img/banner.jpg);
   background-repeat:no-repeat;
   background-position: center center;
   background-color: transparent;
