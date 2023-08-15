@@ -1,0 +1,68 @@
+<div class="slider">
+  <div id="slider" class="slides">
+    {% for slide in site.slides %}
+    <div id="slide-{{ id }}">
+      <img src="{{ src  }}" alt="#">
+      </img>
+    </div>
+    {% endfor %}
+    <div id="slide-1" class="slide">
+      <img src="/assets/img/b-1.jpg" alt="#">
+      </img>
+    </div>
+    <div id="slide-2" class="slide">
+      <img src="/assets/img/b-2.jpg" alt="#">
+      </img>
+    </div>
+    <div id="slide-3" class="slide">
+      <img src="/assets/img/b-3.jpg" alt="#">
+      </img>
+    </div>
+    <div id="slide-4" class="slide">
+      <img src="/assets/img/b-4.jpg" alt="#">
+      </img>
+    </div>
+  </div>
+</div>
+
+<script>
+const slider = document.querySelector("#slider");
+const slides = Array(slider.childElementCount).fill().map((e, i) => slider.children[i]);
+let timeoutId = null;
+
+const slideToNext = (currentSlide) => {
+    if (timeoutId) {
+        clearTimeout(timeoutId);
+      }
+    timeoutId = setTimeout(() => {
+        const currentIndex = slides.findIndex((e) => e.id === currentSlide.target.id);
+
+        if (slider.childElementCount === currentIndex + 1) {
+          /** end of the loop */
+          slider.scroll({left: 0});
+        } else {
+          /** slide to the next one */
+          slider.scroll({left: slides[currentIndex + 1].getBoundingClientRect().width *
+              (currentIndex + 1)})
+        }
+
+      }, 2400);
+  };
+
+const onIntersect = (entries, observer) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            slideToNext(entry);
+          }
+      });
+  };
+
+const observer = new IntersectionObserver(onIntersect, {
+    root: slider,
+    rootMargin: "0px",
+    threshold: 0.75,
+  });
+
+slides.forEach(slide => observer.observe(slide));
+
+</script>
