@@ -16,13 +16,21 @@
     <a id="skip-to-content" href="#content">Skip to the content.</a>
       {% include nav-bar.html %}
 
-    <header id="home" class="page-header" role="banner">
+    <header id="home" role="banner">
+      <div class="banner-slides">
+        <div style="background-image:url(/assets/img/b-1.jpg)"></div>
+        <div style="background-image:url(/assets/img/b-2.jpg)"></div>
+        <div style="background-image:url(/assets/img/b-3.jpg)"></div>
+        <div style="background-image:url(/assets/img/b-4.jpg)"></div>
+        <div style="background-image:url(/assets/img/b-5.jpg)"></div>
+      </div>
+      <div class="page-header">
       <!--<img src="/assets/img/banner.jpg" class="banner-img" />-->
       <h1 class="project-name">{{ page.title | default: site.title | default: site.github.repository_name }}</h1>
       <!--
       <h2 class="project-tagline">{{ page.description | default: site.description | default: site.github.project_tagline }}</h2>
       -->
-      <a href="https://www.youtube.com/@ShahaniMedya" class="btn">YouTube</a>
+      <a href="https://www.youtube.com/@ShahaniMedya" target="_blank" class="btn">YouTube</a>
       <!--
       <h4>
         <a href="tel:{{ site.phone-1 }}">{{ site.phone-1 }}</a>
@@ -30,6 +38,7 @@
         <a href="mailto:{{ site.email }}">{{ site.email }}</a>
       </h4>
       -->
+      </div>
 
     </header>
 
