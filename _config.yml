@@ -12,3 +12,13 @@ phone-1: 0(242)511-4040
 phone-2: 0(532)358-2074
 email: shahanimedya@gmail.com
 
+slides:
+  - src: /assets/img/b-1.jpg
+    id: 1
+  - src: /assets/img/b-2.jpg
+    id: 2
+  - src: /assets/img/b-3.jpg
+    id: 3
+  - src: /assets/img/b-4.jpg
+    id: 4
+

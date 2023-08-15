@@ -1,13 +1,26 @@
 <div class="slider">
   <div id="slider" class="slides">
-    <div id="slide-1">
-      1
+    {% for slide in site.slides %}
+    <div id="slide-{{ id }}">
+      <img src="{{ src  }}" alt="#">
+      </img>
     </div>
-    <div id="slide-2">
-      2
+    {% endfor %}
+    <div id="slide-1" class="slide">
+      <img src="/assets/img/b-1.jpg" alt="#">
+      </img>
     </div>
-    <div id="slide-3">
-      3
+    <div id="slide-2" class="slide">
+      <img src="/assets/img/b-2.jpg" alt="#">
+      </img>
+    </div>
+    <div id="slide-3" class="slide">
+      <img src="/assets/img/b-3.jpg" alt="#">
+      </img>
+    </div>
+    <div id="slide-4" class="slide">
+      <img src="/assets/img/b-4.jpg" alt="#">
+      </img>
     </div>
   </div>
 </div>

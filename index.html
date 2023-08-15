@@ -2,26 +2,86 @@
 layout: default
 gallery:
   - src: /assets/img/s-1.jpg
+    id: 1
     alt: #
   - src: /assets/img/s-2.jpg
+    id: 2
     alt: #
   - src: /assets/img/s-3.jpg
+    id: 3
     alt: #
   - src: /assets/img/s-4.jpg
+    id: 4
     alt: #
   - src: /assets/img/s-5.jpg
+    id: 5
     alt: #
 ---
-<div class="sh-info parallax">
-  <div class="main-content">
-<blockquote>
-Vizyon sahibi bir medya kuruluşu olarak, çalişkan ekibimizle yenilikçi bir bakiş açisiyla başladiğimiz yolda, gündemi takip eden ,günlük yaşantimizda gereken bilgilerle sentezlenmiş ve kültür çeşitliliğine saygi duyan bir yapidayiz..
-</blockquote>
+<!-- About  -->
+<div id="about" class="about parallax">
+    <div class="main-content">
+  <blockquote>
+  Vizyon sahibi bir medya kuruluşu olarak, çalişkan ekibimizle yenilikçi bir bakiş açisiyla başladiğimiz yolda, gündemi takip eden ,günlük yaşantimizda gereken bilgilerle sentezlenmiş ve kültür çeşitliliğine saygi duyan bir yapidayiz..
+  </blockquote>
+</div>
+
+</div>
+
+<!-- Gallery -->
+<div class="slider">
+  <div id="slider" class="slides">
+    {% for slide in page.gallery %}
+    <div id="slide-{{ slide.id }}" class="slide">
+      <img src="{{ slide.src  }}" alt="#">
+      </img>
+    </div>
+    {% endfor %}
   </div>
 </div>
 
-<div class="sh-gallery main-content">
-{% for pic in page.gallery %}
- <img src="{{ pic.src}}" alt="{{ pic.image_alt }}">
-{% endfor %}
+<!-- Contacts -->
+<div id="contacts" class="contacts">
 </div>
+
+
+<script>
+const slider = document.querySelector("#slider");
+const slides = Array(slider.childElementCount).fill().map((e, i) => slider.children[i]);
+let timeoutId = null;
+
+const slideToNext = (currentSlide) => {
+    if (timeoutId) {
+        clearTimeout(timeoutId);
+      }
+    timeoutId = setTimeout(() => {
+        const currentIndex = slides.findIndex((e) => e.id === currentSlide.target.id);
+
+        if (slider.childElementCount === currentIndex + 1) {
+          /** end of the loop */
+          slider.scroll({left: 0});
+        } else {
+          /** slide to the next one */
+          slider.scroll({left: slides[currentIndex + 1].getBoundingClientRect().width *
+              (currentIndex + 1)})
+        }
+
+      }, 4000);
+  };
+
+const onIntersect = (entries, observer) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            slideToNext(entry);
+          }
+      });
+  };
+
+const observer = new IntersectionObserver(onIntersect, {
+    root: slider,
+    rootMargin: "0px",
+    threshold: 0.75,
+  });
+
+slides.forEach(slide => observer.observe(slide));
+
+</script>
