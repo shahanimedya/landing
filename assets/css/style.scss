@@ -40,7 +40,7 @@ footer {
   // scroll-margin-block-start: 50px;
   scroll-snap-align: start;
   // height: calc(100vh - 50px);
-  height: 75vh;
+  height: 70vh;
   width: 100vw;
   background-image: linear-gradient(120deg, #155799, #e64c32);
   background-repeat:no-repeat;
@@ -48,10 +48,14 @@ footer {
   // background-color: black;
 }
 .contacts {
+  color: #fff;
+  a {
+    color: #fff;
+  }
   // scroll-margin-block-start: 50px;
   scroll-snap-align: end;
   // height: calc(100vh - 50px);
-  height: 25vh;
+  min-height: 30vh;
   width: 100vw;
   background-image: linear-gradient(120deg, #155799, #e64c32);
   background-repeat:no-repeat;
