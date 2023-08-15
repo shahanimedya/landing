@@ -250,13 +250,16 @@ footer {
   @media screen and (max-width: 42em) {
     &>div {
       width: 100vw;
-      height: 600px;
+      height: 350px;
     }
   }
   @media screen and (min-width: 42em) and (max-width: 64em) {
+    scroll-snap-align: start;
     &>div {
       width: 50vw;
-      height: calc(100vh - 50px);
+      height: 350px;
+      // width: 50vw;
+      // height: calc(100vh - 50px);
     }
   }
   @media screen and (min-width: 64em) {
