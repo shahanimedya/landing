@@ -30,6 +30,9 @@ footer {
 }
 
 /** Banner slideshow */
+.banner-slides.banner-slides__pause > div {
+  animation-play-state: paused;
+}
 .banner-slides{
   // width: 400px;
   // height: 300px;
@@ -76,23 +79,22 @@ footer {
   & > div:nth-child(5) {
     animation-delay: 20s;
   }
-
-
 }
-  @keyframes banner-slide-show {
-    10% {
-      opacity: 1;
-    }
-    20% {
-      opacity: 1;
-    }
-    30% {
-      opacity: 0;
-    }
-    40% {
-      transform: scale(1.2);
-    }
+
+@keyframes banner-slide-show {
+  10% {
+    opacity: 1;
   }
+  20% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 0;
+  }
+  40% {
+    transform: scale(1.2);
+  }
+}
 
 /** About */
 .about {
