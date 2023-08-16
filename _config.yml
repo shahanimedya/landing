@@ -8,9 +8,24 @@ collections:
   gallery:
     files: true
 
-phone-1: 0(242)511-4040
-phone-2: 0(532)358-2074
-email: shahanimedya@gmail.com
+contacts:
+  - title: Tel
+    name:
+    phone: 0242 511 5040
+    email: shahanimedya@gmail.com
+  - title: Medya sahibi
+    name: Can İPEKOĞLU
+    phone: 0532 290 4603
+    email: shahanisiavash@gmail.com
+  - title: Genel Yayın Yönetmeni
+    name: Esin İPEKOĞLU
+    phone: 0536 633 9017
+    email: esin.shahanimedya@gmail.com
+  - title: Yapımcı Asistanı
+    name: İlayda ÇELİK
+    phone: 0532 358 2074
+    email: İlayda.shahanimedya@gmail.com
+
 
 slides:
   - src: /assets/img/b-1.jpg
