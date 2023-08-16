@@ -104,7 +104,7 @@ const onIntersect = (entries, observer) => {
   };
 
 const observer = new IntersectionObserver(onIntersect, {
-    root: slider,
+    root: null,
     rootMargin: "0px",
     threshold: 0.75,
   });
