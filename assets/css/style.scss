@@ -139,6 +139,12 @@ footer {
   background-repeat:no-repeat;
   background-position: center center;
   // background-color: black;
+  h3 {
+    color: #d5573e;
+  }
+  span > p {
+    line-height: 0.7;
+  }
 }
 
 /** Nav-bar */
