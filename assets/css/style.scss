@@ -126,12 +126,13 @@ footer {
   // background-color: black;
 }
 .contacts {
+  scroll-snap-align: start;
+  scroll-margin-block-start: 50px;
+
   color: #fff;
   a {
     color: #fff;
   }
-  // scroll-margin-block-start: 50px;
-  scroll-snap-align: end;
   // height: calc(100vh - 50px);
   min-height: 30vh;
   width: 100vw;
@@ -225,8 +226,8 @@ footer {
 
 /** Carousel */
 .slider {
-  // scroll-snap-align: start;
-  // scroll-margin-block-start: 50px;
+  scroll-snap-align: start;
+  scroll-margin-block-start: 50px;
   text-align: center;
   overflow: hidden;
 }
