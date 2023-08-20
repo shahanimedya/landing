@@ -13,17 +13,48 @@ html {
 }
 
 header {
+  @media screen and (max-width: 42em) {
+    & {
+      // scroll-snap-align: start;
+      // scroll-margin-block-start: 50px;
+    }
+  }
+  @media screen and (min-width: 42em) and (max-width: 64em) {
+    & {
+      // scroll-snap-align: start;
+      // scroll-margin-block-start: 50px;
+    }
+  }
+  @media screen and (min-width: 64em) {
+    & {
+      scroll-snap-align: start;
+      scroll-margin-block-start: 50px;
+    }
+  }
+
   position: relative;
-  scroll-snap-align: start;
-  scroll-margin-block-start: 50px;
   a {
     color: #fff;
   }
 }
 
 footer {
+  @media screen and (max-width: 42em) {
+    & {
+      // scroll-snap-align: end;
+    }
+  }
+  @media screen and (min-width: 42em) and (max-width: 64em) {
+    & {
+      // scroll-snap-align: end;
+    }
+  }
+  @media screen and (min-width: 64em) {
+    & {
+      scroll-snap-align: end;
+    }
+  }
   box-shadow: 0 1px 1px 0 rgba(66, 66, 66, 0.08), 0 1px 3px 1px rgba(66, 66, 66, 0.16);
-  scroll-snap-align: end;
   .site-footer {
     margin-top: 0;
   }
@@ -105,8 +136,24 @@ footer {
   align-items: center;
   justify-content: center;
   box-shadow: 0 1px 1px 0 rgba(66, 66, 66, 0.08), 0 1px 3px 1px rgba(66, 66, 66, 0.16);
-  scroll-snap-align: start;
-  scroll-margin-block-start: 50px;
+  @media screen and (max-width: 42em) {
+    & {
+      // scroll-snap-align: start;
+      // scroll-margin-block-start: 50px;
+    }
+  }
+  @media screen and (min-width: 42em) and (max-width: 64em) {
+    & {
+      // scroll-snap-align: start;
+      // scroll-margin-block-start: 50px;
+    }
+  }
+  @media screen and (min-width: 64em) {
+    & {
+      scroll-snap-align: start;
+      scroll-margin-block-start: 50px;
+    }
+  }
   // height: calc(100vh - 50px);
   // width: 100vw;
   // background-image: linear-gradient(120deg, #155799, #e64c32);
@@ -115,10 +162,9 @@ footer {
   // background-color: black;
 }
 
-/** Contacts  */
+/** Map */
 .map{
   // scroll-margin-block-start: 50px;
-  scroll-snap-align: start;
   // height: calc(100vh - 50px);
   height: 70vh;
   width: 100vw;
@@ -126,10 +172,26 @@ footer {
   background-repeat:no-repeat;
   background-position: center center;
   // background-color: black;
+  @media screen and (max-width: 42em) {
+    & {
+      pointer-events: none;
+    }
+  }
+  @media screen and (min-width: 42em) and (max-width: 64em) {
+    & {
+      pointer-events: none;
+    }
+  }
+  @media screen and (min-width: 64em) {
+    & {
+      scroll-snap-align: start;
+      // pointer-events: none;
+    }
+  }
 }
+
+/** Contacts  */
 .contacts {
-  scroll-snap-align: start;
-  scroll-margin-block-start: 50px;
 
   color: #fff;
   a {
@@ -147,6 +209,24 @@ footer {
   }
   span > p {
     line-height: 0.7;
+  }
+  @media screen and (max-width: 42em) {
+    & {
+      // scroll-snap-align: start;
+      // scroll-margin-block-start: 50px;
+    }
+  }
+  @media screen and (min-width: 42em) and (max-width: 64em) {
+    & {
+      // scroll-snap-align: start;
+      // scroll-margin-block-start: 50px;
+    }
+  }
+  @media screen and (min-width: 64em) {
+    & {
+      scroll-snap-align: start;
+      scroll-margin-block-start: 50px;
+    }
   }
 }
 
@@ -228,8 +308,24 @@ footer {
 
 /** Carousel */
 .slider {
-  scroll-snap-align: start;
-  scroll-margin-block-start: 50px;
+  @media screen and (max-width: 42em) {
+    & {
+      // scroll-snap-align: start;
+      // scroll-margin-block-start: 50px;
+    }
+  }
+  @media screen and (min-width: 42em) and (max-width: 64em) {
+    & {
+      // scroll-snap-align: start;
+      // scroll-margin-block-start: 50px;
+    }
+  }
+  @media screen and (min-width: 64em) {
+    & {
+      scroll-snap-align: start;
+      scroll-margin-block-start: 50px;
+    }
+  }
   text-align: center;
   overflow: hidden;
 }
@@ -247,10 +343,7 @@ footer {
 
   overflow-x: auto;
   scroll-snap-type: x mandatory;
-
-
-
-  scroll-behavior: smooth;
+  // scroll-behavior: smooth;
   //-webkit-overflow-scrolling: touch;
 
   //scroll-snap-points-x: repeat(300px);
@@ -263,7 +356,6 @@ footer {
     }
   }
   @media screen and (min-width: 42em) and (max-width: 64em) {
-    scroll-snap-align: start;
     &>div {
       width: 50vw;
       height: 350px;
@@ -272,6 +364,7 @@ footer {
     }
   }
   @media screen and (min-width: 64em) {
+    scroll-snap-align: start;
     &>div {
       // width: 25vw;
       // height: 700px;
@@ -281,7 +374,7 @@ footer {
   }
 
   &>div {
-    scroll-snap-align: start;
+    // scroll-snap-align: start;
     flex-shrink: 0;
     background: #eee;
     transform-origin: center center;
