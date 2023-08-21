@@ -170,12 +170,12 @@ footer {
   // background-color: black;
   @media screen and (max-width: 42em) {
     & {
-      pointer-events: none;
+      // pointer-events: none;
     }
   }
   @media screen and (min-width: 42em) and (max-width: 64em) {
     & {
-      pointer-events: none;
+      // pointer-events: none;
     }
   }
   @media screen and (min-width: 64em) {
