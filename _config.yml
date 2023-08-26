@@ -3,10 +3,17 @@ livereload: true
 url: https://www.shahanimedya.com/
 title: Shahanı Medya Yayincilik
 description: Vizyon sahibi bir medya
+lang: tr_TR
 locale: tr_TR
 collections:
   gallery:
     files: true
+
+social:
+  name: Shahanı Medya
+  links:
+    - https://www.instagram.com/shahanimedya/
+    - https://www.facebook.com/profile.php?id=100082866865573
 
 contacts:
   - title: Tel
